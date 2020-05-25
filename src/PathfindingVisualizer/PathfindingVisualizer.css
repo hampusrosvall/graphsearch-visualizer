@@ -1,5 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
 .grid {
   position: absolute;
-  bottom: 20%;
-  left: 20%;
+  bottom: 14%;
+  left: 12%;
+}
+
+.button-BFS {
+  font-family: "Lato";
+  font-size: medium;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  left: 45%;
+  top: 30%;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  outline: none;
+}
+
+.button-DFS {
+  font-family: "Lato";
+  font-size: medium;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  left: 25%;
+  top: 30%;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  outline: none;
+}
+
+.button-reset {
+  font-family: "Lato";
+  font-size: medium;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  left: 5%;
+  top: 30%;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  outline: none;
+}
+
+.button-BFS:hover {
+  background-color: #4c56af; /* Green */
+  color: white;
+}
+
+.button-DFS:hover {
+  background-color: #4c56af; /* Green */
+  color: white;
+}
+
+.button-reset:hover {
+  background-color: #4c56af; /* Green */
+  color: white;
+}
+
+.top-container {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(117, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.node-container {
+  left: 50%;
+  width: 10%;
+  top: 30%;
+}
+
+.node {
+  width: 25px;
+  height: 25px;
+  outline: 5px round rgb(175, 216, 248);
+  display: inline-block;
+  margin: 0 2px;
+  border-radius: 6px;
+  transition-duration: 1s;
 }

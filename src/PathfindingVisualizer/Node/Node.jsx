@@ -2,8 +2,8 @@ import React from "react";
 import "./Node.css";
 
 const STANDARD_COLOR = "whitesmoke";
-const SOURCE_COLOR = "blue";
-const TARGET_COLOR = "red";
+const SOURCE_COLOR = "lightgreen";
+const TARGET_COLOR = "lightcoral";
 export default class Node extends React.Component {
   render() {
     const { row, col, sourceNode, targetNode } = this.props;

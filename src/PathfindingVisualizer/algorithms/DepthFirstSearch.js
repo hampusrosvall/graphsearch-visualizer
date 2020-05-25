@@ -1,21 +1,22 @@
-export const BreadthFirstSearch = (sourceNode, grid) => {
-  let visitedNodes = [];
-  let queue = [];
+export const DepthFirstSearch = (sourceNode, grid) => {
   let parents = new Map();
-  parents.set(sourceNode, -1);
-  queue.push(sourceNode);
+  let visitedNodes = [];
+  let nodeStack = [sourceNode];
 
-  while (queue.length > 0) {
-    const currentNode = queue.shift();
+  parents.set(sourceNode, -1);
+
+  while (nodeStack.length) {
+    const currentNode = nodeStack.shift();
     visitedNodes.push(currentNode);
     if (currentNode.targetNode) break;
     for (const adjacentNode of getAdjacentNodes(currentNode, grid)) {
       if (!parents.has(adjacentNode)) {
         parents.set(adjacentNode, currentNode);
-        queue.push(adjacentNode);
+        nodeStack.unshift(adjacentNode);
       }
     }
   }
+
   return [parents, visitedNodes];
 };
 
@@ -42,4 +43,4 @@ function isValid(row, col, grid) {
   return row >= 0 && row <= maxRow && col >= 0 && col <= maxCol;
 }
 
-export default BreadthFirstSearch;
+export default DepthFirstSearch;
